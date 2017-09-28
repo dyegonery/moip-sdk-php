@@ -456,6 +456,15 @@ class Orders extends MoipResource
     }
 
     /**
+     * Return Moip checkout links
+     * @return Object       List of Moip Check hrefs
+     */
+    public function getLinks()
+    {
+        return $this->getIfSet('_links');
+    }
+
+    /**
      * Structure of payment.
      *
      * @return \Moip\Resource\Payment
